@@ -1,0 +1,326 @@
+/* ------------------------------------------------------------
+   Fonts
+------------------------------------------------------------ */
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-VariableFont_opsz,wght.ttf");
+  font-display: swap;
+}
+
+/* ------------------------------------------------------------
+   Theme tokens (Light default + Dark override)
+   Tip: add <body class="dark"> for dark mode
+------------------------------------------------------------ */
+:root {
+  color-scheme: light dark;
+
+  /* Colors - Light mode */
+  --bg: #f6f3ee;
+  --surface: #ffffff;
+  --surface-2: #fbf8f3;
+
+  --text: #2f2f2f;
+  --heading: #2f2f2f;
+  --muted: #6b6b6b;
+
+  --border: #e8e3dc;
+
+  --accent: #4a6fa5;   /* primary */
+  --accent-2: #7f9bb3; /* soft text / quotes */
+  --warm: #c47a5a;     /* tags / highlights */
+  --success: #7a9e7e;
+
+  /* Effects */
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 16px 45px rgba(0, 0, 0, 0.16);
+
+  /* Radius */
+  --radius: 18px;
+  --radius-pill: 999px;
+
+  /* Inputs */
+  --input-bg: color-mix(in oklab, var(--surface) 78%, var(--surface-2));
+  --placeholder: color-mix(in oklab, var(--muted) 75%, transparent);
+}
+
+body.dark {
+  /* Colors - Dark mode */
+  --bg: #1f1e1c;
+  --surface: #2a2826;
+  --surface-2: #242220;
+
+  --text: #f3efea;
+  --heading: #f3efea;
+  --muted: #b8b2a9;
+
+  --border: #3a3733;
+
+  --accent: #8fafd1;
+  --accent-2: #afc6dd;
+  --warm: #d28a6a;
+  --success: #8fbf93;
+
+  --shadow: 0 14px 44px rgba(0, 0, 0, 0.5);
+  --shadow-hover: 0 18px 55px rgba(0, 0, 0, 0.55);
+
+  --input-bg: color-mix(in oklab, var(--surface) 72%, var(--surface-2));
+  --placeholder: color-mix(in oklab, var(--muted) 80%, transparent);
+}
+
+/* ------------------------------------------------------------
+   Base
+------------------------------------------------------------ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+  color: var(--text);
+}
+
+/* ------------------------------------------------------------
+   Header
+------------------------------------------------------------ */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  padding: 1em 1em;
+  border-bottom: 1px solid var(--border);
+
+  /* Use a semi-transparent surface (works in both modes) */
+  background: color-mix(in oklab, var(--bg) 82%, transparent);
+  backdrop-filter: blur(10px);
+}
+
+.header-container {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+header h1 {
+  margin: 0 0 12px;
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--heading);
+
+  animation: slide-in 3s;
+}
+
+@keyframes slide-in {
+  from {
+    translate: 150vw 0;
+    scale: 150% 1;
+  }
+  to {
+    translate: 0 0;
+    scale: 100% 1;
+  }
+}
+
+header nav ul {
+  display: grid;
+  grid-template-columns: 1fr 42px 42px;
+  gap: 0.5em;
+  align-items: center;
+}
+
+/* Search input */
+header nav ul li input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  background: var(--input-bg);
+  color: var(--text);
+  outline: none;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+header nav ul li input::placeholder {
+  font-size: larger;
+  color: var(--placeholder);
+}
+
+header nav ul li input:focus {
+  border-color: color-mix(in oklab, var(--accent) 50%, var(--border));
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05), 0 0 0 3px color-mix(in oklab, var(--accent) 25%, transparent);
+}
+
+/* Plus button (2nd item) */
+header nav ul li:nth-of-type(2) {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+header nav ul li:nth-of-type(2):hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Avatar */
+header nav ul li img {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+}
+
+@media (width > 37.5em) {
+  header {
+    padding: 1em 2em;
+  }
+  header nav ul {
+    gap: 1em;
+  }
+}
+
+/* ------------------------------------------------------------
+   Filter buttons
+------------------------------------------------------------ */
+ul.filters {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+ul.filters li button {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  padding: 0.9rem 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+ul.filters li button:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+  border-color: color-mix(in oklab, var(--border) 60%, var(--accent));
+}
+
+ul.filters li button.active {
+  background: var(--accent);
+  border-color: color-mix(in oklab, var(--accent) 55%, var(--border));
+  color: #fff;
+}
+
+/* ------------------------------------------------------------
+   Images container
+------------------------------------------------------------ */
+ul.container {
+  display: grid; /* fixed: was grid-lanes */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1em;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+ul.container li button {
+  border: none;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+ul.container li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+ul.container li img:hover {
+  transform: translateY(-2px) rotate(-1.5deg); 
+  box-shadow: var(--shadow-hover);
+}
+
+/* ------------------------------------------------------------
+   Dialog
+------------------------------------------------------------ */
+dialog[open] {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+
+  width: min(900px, 92vw);
+  height: min(600px, 82vh);
+  padding: 3rem;
+
+  box-shadow: var(--shadow-hover);
+}
+
+::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+dialog button.closebutton {
+  font-size: 1rem;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 32px;
+  height: 32px;
+
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+}
+
+dialog img {
+  border-radius: var(--radius);
+  max-width: 100%;
+  height: auto;
+}
+
+@media (width > 37.5em) {
+  dialog[open] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  ul.filters li button {
+    font-size: 1rem;
+  }
+}

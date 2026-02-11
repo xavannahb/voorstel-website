@@ -6,14 +6,14 @@
 :root{
   /* Colors */
   color-scheme: light dark;
-  --headings: light dark (#312b2b,#f8f8f8);
-  --text: light dark (#312b2b,#f8f8f8);
-  --background-color: light dark (#f8f8f8,#312b2b);
+  --headings: light dark (#2a2020,#f8f8f8);
+  --text: light dark (#2a2020,#f8f8f8);
+  --background-color: light dark (#f8f8f8,#a62f2f);
+  
   --border: rgba(15, 23, 42, 0.08);
   --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-  --shadowHover: 0 16px 45px rgba(15, 23, 42, 0.18);
+  --shadow-hover: 0 16px 45px rgba(15, 23, 42, 0.18);
   --radius: 18px;
-  --button: light dark (#d0b3b3,#9c2828);
 
   /* Styling */
   --border-radius: 1rem; 
@@ -147,7 +147,7 @@ ul {
 }
 }
 
-/* MAIN Filter buttons */
+/* Main Filter buttons */
 
 ul.filters{
   max-width: 1200px;
@@ -162,15 +162,16 @@ ul.filters li button{
   border: none;
   padding: 1rem;
   border-radius: var(--border-radius);
+  background: var(--button);
 }
 
 ul.filters li button:hover{
-  background: yellowgreen;
+  background: var(--button-hover);
 }
 
 
 ul.filters li button.active{
-  background: blue;
+  background: var(--button-active);
   color: white;
 }
 
@@ -194,9 +195,8 @@ ul.container li img{
 }
 
 ul.container li img:hover{
-  transform: translateY(-2px);
-  transform: rotateZ(-5deg);
-  box-shadow: var(--shadowHover);
+  transform: translateY(-2px) rotate(-1.5deg); 
+  box-shadow: var(--shadow-hover);
 }
 
 ul.container li button {

@@ -9,10 +9,12 @@
   --headings: light dark (#312b2b,#f8f8f8);
   --text: light dark (#312b2b,#f8f8f8);
   --background-color: light dark (#f8f8f8,#312b2b);
+  
   --border: rgba(15, 23, 42, 0.08);
   --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
   --shadowHover: 0 16px 45px rgba(15, 23, 42, 0.18);
   --radius: 18px;
+  --button: light dark (#d0b3b3,#9c2828);
 
   /* Styling */
   --border-radius: 1rem; 
@@ -44,8 +46,7 @@ header {
   z-index: 10;                        
   background: rgba(var(--background-color), 0.8);
   backdrop-filter: blur(10px);    
-  border-bottom: 1px solid var(--border);              
-  margin-bottom: 14px;                
+  border-bottom: 1px solid var(--border);                             
 }
 
 .header-container {
@@ -147,36 +148,59 @@ ul {
 }
 }
 
-/* MAIN Images */
-.container {
+/* MAIN Filter buttons */
+
+ul.filters{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+ul.filters li button{
+  border: none;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+}
+
+ul.filters li button:hover{
+  background: yellowgreen;
+}
+
+
+ul.filters li button.active{
+  background: blue;
+  color: white;
+}
+
+/* Images container */
+
+ul.container {
+  display: grid-lanes;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1em;
+  padding: 0;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1em;
 }
 
-.container ul {
-  display: grid-lanes;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1em;
-  padding: 0;
-}
-
-.container ul li img{
+ul.container li img{
   border-radius: var(--border-radius);
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* animation-duration: 3s;
-  animation-name: slide-in;    */
 }
 
-.container ul li img:hover{
+ul.container li img:hover{
   transform: translateY(-2px);
   transform: rotateZ(-5deg);
   box-shadow: var(--shadowHover);
 }
 
-button {
+ul.container li button {
   border: none;
   padding: 0;
   background: none;
@@ -217,5 +241,9 @@ dialog img {
       gap: 3rem;
       padding: 3rem;
 }
+.filters ul li button{
+  font-size: 1rem;
 
+}
+ 
 }
