@@ -53,6 +53,7 @@ Ik ga een workshop volgen over theming en verder met de afbeeldingen uitzoeken v
 ### 5 februari – Workshop Theming & CSS
 
 **Wat heb ik vandaag gedaan?**
+
 Ik ben begonnen met een Workshop theming van Vasilius. Hier legde hij veel dingen uit over de :root van css en over hoe je het kan gebruiken om een theme te geven aan je website. Denk aan light & dark mode of seizoensgebonden thema’s. 
 
 In de middag moest weer ergens zijn waardoor ik pas later om de middag verder kon. Ik ben bezig geweest met een :root op zetten en de light en dark mode alvast in te stellen op mijn site. 
@@ -115,6 +116,7 @@ Light en dark mode toevoegen.
 ### 10 februari - Flexbox en grid + API dialog
 
 **Wat heb ik vandaag gedaan?**
+
  Ik heb de layout aangepast voor mobiele schermen met media queries. Ook heb ik de grid aangepast naar 2 kolommen op tablet en 1 kolom op mobiel. 
 
 Ik ben begonnen vandaag met twee workshops van Cyd. De Workshop Flexbox & Grid en de Workshop Basishygiëne. Ik heb veel van Cyd geleerd over verschillen tussen Flexbox en Grid en wanneer je deze moet gebruiken maar ook dingen zoals het verschil tussen em en rem. In de workshop basishygiene liet ze zien hoe je een verzorgde css kan maken die ook voor andere ontwerpers duidelijk is en makkelijk om in te werken.
