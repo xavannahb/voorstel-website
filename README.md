@@ -2,7 +2,7 @@
 
 ## Opdracht
 
-Ontwerp en bouw een **persoonlijke website** waarmee je **jezelf voorstelt**, waarmee je jouw **startniveau overstijgt** en waarmee je **jouw doelen** voor de minor presenteert.
+Ontwerp en bouw een persoonlijke website waarmee je jezelf voorstelt, waarmee je jouw startniveau overstijgt en waarmee je jouw doelen voor de minor presenteert.
 
 ### Brainstorm
 
@@ -156,7 +156,20 @@ Hoe makkelijk het is om List.js in je website te verwerken als je het inlaadt va
 
 Mijn website presenteren.
 
+## Herkansing 
 
+**Feedback**
 
+Bespreek je werk (ontwerp en code) met minimaal 2 studenten waarmee je dat nog niet gedaan. Leg die feedback vast in je procesverslag. Gebruik de feedback om je ontwerp te verbeteren.
 
-## Eindproduct
+**Louise**
+
+Als je de zoekbalk gebruikt om naar iets te zoeken dan krijg je alleen afbeeldingen. Je ziet eigenlijk niet echt waar je naar zoekt. Misschien kan je hier wat op verzinnen zodat je mensen wat meer inzicht geeft op waar ze naar zoeken. 
+
+**Sela**
+
+De styling lijkt niet helemaal compleet. Je hebt de styling van pinterest nagedaan maar je hebt nog niet echt je eigen touch eraan te gegeven. Het lijkt alsof je website nog afgemaakt moet worden.
+
+**Luna Jay**
+
+De filters die je hebt toegevoegd lijken niet echt toegevoegde waarde te hebben aan je ontwerp. Probeer er een toevoeging aan te geven waardoor ze dat wel doen. 
