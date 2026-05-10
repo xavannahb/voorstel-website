@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xavannah's Board</title>
-    <link rel="stylesheet" href="style-new.css">
+    <link rel="stylesheet" href="style.css">
     
     <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js" defer></script>
     <script src="main.js" defer></script>
@@ -21,11 +21,13 @@
     </header>
     <main>
         <section>
-            <ul class="filters">
-                <li><button data-filter="all">Alles</button></li>
-                <li><button data-filter="vrije-tijd">Vrije tijd</button></li>
-                <li><button data-filter="cmd">CMD</button></li>
-            </ul>
+            <div class="filters">
+                <ul>
+                    <li><button data-filter="all">Alles</button></li>
+                    <li><button data-filter="vrije-tijd">Vrije tijd</button></li>
+                    <li><button data-filter="cmd">CMD</button></li>
+                </ul>
+            </div>
             <ul class="container list">
                 <li class="vrije-tijd">
                     <button data-title="Interieur" commandfor="dialog1" command="show-modal" class="openimage"><img src="images/ikea-stelling-kastje.jpg" alt="ikea stelling kastje"></button>

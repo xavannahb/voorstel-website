@@ -173,3 +173,7 @@ De styling lijkt niet helemaal compleet. Je hebt de styling van pinterest nageda
 **Luna Jay**
 
 De filters die je hebt toegevoegd lijken niet echt toegevoegde waarde te hebben aan je ontwerp. Probeer er een toevoeging aan te geven waardoor ze dat wel doen. 
+
+**Wat heb ik gedaan?**
+
+Ik heb op basis van de feedback de styling compleet aangepast. Ik heb voor wat kleuren gekozen en op basis daarvan mijn ontwerp verbeterd. Ik heb ook de zoekfunctie ervan aangepast dus dat je ziet waar je op zoekt ipv dat er alleen fotos verschijnen. Daarnaast heb ik ook een kopje aan de filters toegevoegd om ervoor te zorgen dat je weet als je de afbeeldingen los ziet dat je begrijpt bij welke filter ze horen. 
