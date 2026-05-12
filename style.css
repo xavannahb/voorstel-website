@@ -48,7 +48,6 @@ header {
     z-index: 10;
     padding: 1rem 1.25rem;
     background: var(--accent-color-3);
-    border-bottom: 1px solid var(--border-color);
 }
 
 header nav ul {
