@@ -83,7 +83,7 @@ document.querySelectorAll('.filters button').forEach(function(button) {
     });
 });
 
-
+// geeft een active class aan de filterknoppen zodat je kan zien welke filter actief is
 document.querySelectorAll('.filters button').forEach(button => {
   button.addEventListener('click', function () {
 
