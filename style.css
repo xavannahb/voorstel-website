@@ -62,7 +62,7 @@ header nav ul {
 header h1 {
     margin: 0.5rem;
     color: var(--background-color);
-    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-size: clamp(1.5rem, 4vw, 3.5rem);
     font-weight: 600;
     letter-spacing: -0.02em;
     animation: slide-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
@@ -118,10 +118,10 @@ header nav ul li:nth-child(2) input::placeholder {
     background: var(--background-color);
     color: var(--text-muted-color);
     font-family: inherit;
-    font-size: 13px;
+    font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
-    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
  
 .filters li button:hover {
@@ -140,9 +140,8 @@ header nav ul li:nth-child(2) input::placeholder {
 
 ul.container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 0.75rem;
-    max-width: 1200px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
     margin: 1rem auto;
     padding: 0 1.25rem;
 }
@@ -165,15 +164,18 @@ ul.container li button.openimage::after {
     content: attr(data-title);
     position: absolute;
     bottom: 1rem;
-    left: 0;
-    right: 0;
+    left: 0.8rem;
     color: var(--background-color);
-    padding: 8px 12px;
-    font-size: 0.9rem;
-    font-weight: 500;
+    background: #1a4c7aa2;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    padding: 3px 8px;
     pointer-events: none;
 }
 
+ul.container li button.openimage::after:hover {
+    transform: scale(1.03);
+}
  
 ul.container li img {
     display: block;
@@ -192,15 +194,16 @@ ul.container li button:hover img {
 }
 
 /* Filter popup ding */
+/* BRON: ChatGPT prompt: hoe kan ik ervoor zorgen dat er kleine labels op de afbeeldingen verschijnen */
 ul.container li.cmd::before {
     content: 'CMD';
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 0.8rem;
+    right: 0.8rem;
     z-index: 2;
     background: var(--accent-color-2);
     color: var(--background-color);
-    font-size: 10px;
+    font-size: 0.8rem;
     font-weight: 600;
     letter-spacing: 0.08em;
     padding: 3px 8px;
@@ -208,16 +211,15 @@ ul.container li.cmd::before {
     pointer-events: none;
 }
 
-/* BRON: ChatGPT prompt: hoe kan ik ervoor zorgen dat er kleine labels op de afbeeldingen verschijnen */
 ul.container li.vrije-tijd::before {
     content: 'Vrije tijd';
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 0.8rem;
+    right: 0.8rem;
     z-index: 2;
     background: var(--background-filters-color);
     color: var(--accent-color-3);
-    font-size: 10px;
+    font-size: 0.8rem;
     font-weight: 600;
     letter-spacing: 0.06em;
     padding: 3px 8px;
@@ -266,7 +268,7 @@ dialog img {
     font-weight: 600;
 }
  
-.dialog-content p {
+.dialog-content p, cite {
     margin: 0;
     font-size: 1rem;
     line-height: 1.7;
@@ -305,6 +307,13 @@ dialog button.closebutton {
 
     dialog img {
         border-radius: var(--radius-big) 0 0 var(--radius-big);
+    }
+
+    ul.container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        max-width: 1200px;
+        margin: 1rem auto;
+        padding: 0 1.25rem;
     }
 }
  

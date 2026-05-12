@@ -23,7 +23,7 @@
         <section>
             <div class="filters">
                 <ul>
-                    <li><button data-filter="all">Alles</button></li>
+                    <li><button data-filter="all" class="active">Alles</button></li>
                     <li><button data-filter="vrije-tijd">Vrije tijd</button></li>
                     <li><button data-filter="cmd">CMD</button></li>
                 </ul>
@@ -37,7 +37,7 @@
                             <div class="dialog-content">
                                 <button autofocus commandfor=dialog1 command=close class="closebutton">X</button>
                                 <h2 class="title">Interieur</h2>
-                                <p class="description">Sinds juli 2023 woon ik op mezelf. Ik vind het heel leuk om bezig te zijn met styling en interieur. Naar mijn mening is je huis nooit af.</p>
+                                <p>Sinds juli 2023 woon ik op mezelf. Ik vind het heel leuk om bezig te zijn met styling en interieur. Naar mijn mening is je huis nooit af.</p>
                             </div>
                     </dialog>
                 </li>
@@ -50,7 +50,7 @@
                             <div class="dialog-content">
                                 <button autofocus commandfor=dialog2 command=close class="closebutton">X</button>
                                 <h2 class="title">Vrienden</h2>
-                                <p class="description">Ik hou ervan om tijd door te brengen met mijn vrienden. Ik weet niet wat ik zonder ze zou moeten.</p>
+                                <p>Ik hou ervan om tijd door te brengen met mijn vrienden. Ik weet niet wat ik zonder ze zou moeten.</p>
                             </div>
                     </dialog>
                 </li>
@@ -63,7 +63,7 @@
                             <div class="dialog-content">
                                 <button autofocus commandfor=dialog3 command=close class="closebutton">X</button>
                                 <h2 class="title">Amsterdam</h2>
-                                <p class="description">Ik ben verliefd op de stad Amsterdam. Er is zoveel cultuur.</p>
+                                <p>Ik ben verliefd op de stad Amsterdam. Er is zoveel cultuur.</p>
                             </div>
                     </dialog>
                 </li>
@@ -75,7 +75,7 @@
 
                             <div class="dialog-content">
                                 <button autofocus commandfor=dialog4 command=close class="closebutton">X</button>
-                                <h2>Leerdoel 1:</h2>
+                                <h2 class="title">Leerdoel 1:</h2>
                                 <p>Ik wil leren hoe ik mijn websites minder statisch kan maken door interactieve elementen en dynamische content toe te voegen die zorgen voor meer beleving op een website.</p>
                                 <cite>Bron: Afbeelding van Pinterest</cite>
                             </div>
@@ -89,14 +89,14 @@
 
                             <div class="dialog-content">
                                 <button autofocus commandfor=dialog5 command=close class="closebutton">X</button>
-                                <h2>Amsterdam west</h2>
+                                <h2 class="title">Amsterdam west</h2>
                                 <p>In amsterdam west zitten ontelbare leuke plekken. Genoeg cafetjes en bars om te ontdekken.</p>
                             </div>
                     </dialog>
                 </li>
 
                 <li class="cmd">
-                    <button data-title="Leerdoel 2" commandfor="dialog6" command="show-modal" class="openimage"><img src="images/louise.jpg" alt="louise"></button>
+                    <button data-title="Louise" commandfor="dialog6" command="show-modal" class="openimage"><img src="images/louise.jpg" alt="louise"></button>
                     <dialog id="dialog6">
                         <img src="images/louise.jpg" alt="louise">
 
@@ -114,7 +114,7 @@
 
                             <div class="dialog-content">
                                 <button autofocus commandfor=dialog7 command=close class="closebutton">X</button>
-                                <h2>Leerdoel 2:</h2>
+                                <h2 class="title">Leerdoel 2:</h2>
                                 <p>Ik wil leren hoe ik mobiele ontwerpen zo gebruiksvriendelijk mogelijk kan maken door altijd mobile-first te ontwerpen en vanaf daar het ontwerp uit te breiden.</p>
                                 <cite>Bron: Afbeelding van Pinterest</cite>
                             </div>
@@ -128,7 +128,7 @@
 
                             <div class="dialog-content">
                                 <button autofocus commandfor=dialog8 command=close class="closebutton">X</button>
-                                <h2>Lunchen</h2>
+                                <h2 class="title">Lunchen</h2>
                                 <p>Ik vind het heel leuk om te tentjes te ontdekken en met mijn vrienden te lunchen. In de zomer het lieftst op het terras!</p>
                             </div>
                     </dialog>
@@ -141,7 +141,7 @@
 
                             <div class="dialog-content">
                                 <button autofocus commandfor=dialog9 command=close class="closebutton">X</button>
-                                <h2>Leerdoel 3</h2>
+                                <h2 class="title">Leerdoel 3</h2>
                                 <p>Ik wil mijn kennis van CSS-animaties uitbreiden zodat ik vloeiende en gebruiksvriendelijke animaties kan toepassen die de gebruikerservaring verbeteren.</p>
                                 <cite>Bron: Afbeelding van Pinterest</cite>
                             </div>
@@ -155,7 +155,7 @@
 
                             <div class="dialog-content">
                                 <button autofocus commandfor=dialog10 command=close class="closebutton">X</button>
-                                <h2>Koffie tentjes</h2>
+                                <h2 class="title">Koffie tentjes</h2>
                                 <p><strong>☕ Skina, Amsterdam West</strong></p>
                                 <p><strong>☕ Yusu, Amsterdam Oost</strong></p>
                                 <p><strong>☕ Toki, Amsterdam Centrum</strong></p>
@@ -171,7 +171,7 @@
 
                             <div class="dialog-content">
                                 <button autofocus commandfor=dialog11 command=close class="closebutton">X</button>
-                                <h2>Klasgenoten favo dier:</h2>
+                                <h2 class="title">Klasgenoten favo dier:</h2>
                                 <ul></ul>
                             </div>
                     </dialog>
@@ -197,7 +197,7 @@
 
                             <div class="dialog-content">
                                 <button autofocus commandfor=dialog13 command=close class="closebutton">X</button>
-                                <h2>Quote</h2>
+                                <h2 class="title">Quote</h2>
                                 <p><strong>Don't forget somwhere between hello and goodbye, there was love.</strong></p>
                                 <p>Door de hele stad vindt je ze. Quotes op stickers, gebouwen, briefjes. Ik vind ze geweldig.</p>
                             </div>
@@ -211,7 +211,7 @@
 
                             <div class="dialog-content">
                                 <button autofocus commandfor=dialog14 command=close class="closebutton">X</button>
-                                <h2>Vietnam</h2>
+                                <h2 class="title">Vietnam</h2>
                                 <p>Ik vind het leuk om te backpacken naar andere landen en andere mensen te ontmoeten die dezelfde affiniteit hebben met reizen..</p>
                             </div>
                     </dialog>
@@ -224,7 +224,7 @@
 
                             <div class="dialog-content">
                                 <button autofocus commandfor=dialog15 command=close class="closebutton">X</button>
-                                <h2>Leerdoel 4</h2>
+                                <h2 class="title">Leerdoel 4</h2>
                                 <p>Ik wil mijn JavaScript-vaardigheden verdiepen door complexere functionaliteiten te bouwen in websites. Ik wil graag interactieve elementen kunnen ontwerpen en beter worden met API's.</p>
                                 <cite>Bron: Afbeelding van Pinterest</cite>
                             </div>
@@ -238,7 +238,7 @@
 
                             <div class="dialog-content">
                                 <button autofocus commandfor=dialog16 command=close class="closebutton">X</button>
-                                <h2>Reizen</h2>
+                                <h2 class="title">Reizen</h2>
                                 <p>Ik vind het leuk om te reizen naar andere landen en te ontdekken wat daar te zien is.</p>
                             </div>
                     </dialog>
@@ -251,7 +251,7 @@
 
                             <div class="dialog-content">
                                 <button autofocus commandfor=dialog17 command=close class="closebutton">X</button>
-                                <h2>Diners</h2>
+                                <h2 class="title">Diners</h2>
                                 <p>xx</p>
                             </div>
                     </dialog>
@@ -259,7 +259,9 @@
             </ul>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+
+    </footer>
 
 
     

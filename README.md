@@ -185,3 +185,21 @@ De filters die je hebt toegevoegd lijken niet echt toegevoegde waarde te hebben 
 **Wat heb ik gedaan?**
 
 Ik heb op basis van de feedback de styling compleet aangepast. Ik heb voor wat kleuren gekozen en op basis daarvan mijn ontwerp verbeterd. Ik heb ook de zoekfunctie ervan aangepast dus dat je ziet waar je op zoekt ipv dat er alleen fotos verschijnen. Daarnaast heb ik ook een kopje aan de filters toegevoegd om ervoor te zorgen dat je weet als je de afbeeldingen los ziet dat je begrijpt bij welke filter ze horen. 
+
+## Bronvermelding
+
+**Afbeeldingen**
+* Pinterest
+
+**Zoekfunctie & filters**
+* List.js | https://listjs.com/docs/search-sort/
+* ChatGPT | prompt 'Kan je mij helpen om classes aan de li te geven om te kunnen filteren tussen de li. Dus als deze geklikt worden dat ze tonen.'
+* ChatGPT | prompt 'hoe kan ik ervoor zorgen dat er kleine labels op de afbeeldingen verschijnen.'
+
+**API**
+* Sanne | Overgenomen wat we met Sanne in de les hebben gemaakt
+* FNFD | https://fdnd.directus.app/items/person
+
+**Dialog**
+* Vasilis | Samen met Vasilis gemaakt
+

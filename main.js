@@ -59,7 +59,7 @@ async function getLouise() {
 // list.js search functie 
 
 var options = {
-    valueNames: [ 'title', 'description' ]
+    valueNames: [ 'title' ]
 };
 
 var tegelList = new List('tegels', options);
