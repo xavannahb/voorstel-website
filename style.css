@@ -30,7 +30,7 @@
 
 body {
     margin: 0;
-    font-family: 'Inter';
+    font-family: 'system-ui', sans-serif;
     background: var(--background-color);
     color: var(--text-color);     
 }
@@ -55,15 +55,14 @@ header nav ul {
     max-width: 1150px;
     margin: auto;
     display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    gap: 1.5rem;   
+    grid-template-columns: 1fr;
+    align-items: center; 
 }
 
 header h1 {
     margin: 0.5rem;
     color: var(--background-color);
-    font-size: clamp(24px, 4vw, 40px);
+    font-size: clamp(2rem, 4vw, 3.5rem);
     font-weight: 600;
     letter-spacing: -0.02em;
     animation: slide-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
@@ -82,7 +81,7 @@ header h1 {
 
 header nav ul li:nth-child(2) input {
     width: 100%;
-    padding: 0.6rem 1rem;
+    padding: 0.5rem 1rem;
     border-radius: var(--radius-round);
     border: 1px solid var(--border-color);
     font-family: inherit;
@@ -209,6 +208,7 @@ ul.container li.cmd::before {
     pointer-events: none;
 }
 
+/* BRON: ChatGPT prompt: hoe kan ik ervoor zorgen dat er kleine labels op de afbeeldingen verschijnen */
 ul.container li.vrije-tijd::before {
     content: 'Vrije tijd';
     position: absolute;
@@ -225,7 +225,6 @@ ul.container li.vrije-tijd::before {
     backdrop-filter: blur(6px);
     pointer-events: none;
 }
-/* BRON: ChatGPT prompt: hoe kan ik ervoor zorgen dat er kleine labels op de afbeeldingen verschijnen */
 
 /* DIALOG */
 dialog {
@@ -243,12 +242,6 @@ dialog[open] {
     grid-template-columns: 1fr;
 }
  
-@media (min-width: 600px) {
-    dialog[open] {
-        grid-template-columns: 1fr 1fr;
-        height: 560px;
-    }
-}
  
 dialog img {
     width: 100%;
@@ -257,13 +250,7 @@ dialog img {
     display: block;
     border-radius: 0;
 }
- 
-@media (min-width: 600px) {
-    dialog img {
-        border-radius: var(--radius-big) 0 0 var(--radius-big);
-    }
-}
- 
+
 .dialog-content {
     padding: 2rem 1.75rem;
     display: flex;
@@ -277,22 +264,21 @@ dialog img {
     margin: 0 0 0.75rem;
     font-size: 20px;
     font-weight: 600;
-    letter-spacing: -0.01em;
 }
  
 .dialog-content p {
     margin: 0;
-    font-size: 14px;
+    font-size: 1rem;
     line-height: 1.7;
-    color: var(--color-text-grey);
+    color: var(--text-muted-color);
 }
  
 /* Close button */
 dialog button.closebutton {
     font-size: 1rem;
     position: absolute;
-    top: 15px;
-    right: 15px; 
+    top: 1rem;
+    right: 1rem; 
     width: 32px;
     height: 32px;  
     background-color: #fff;
@@ -303,3 +289,22 @@ dialog button.closebutton {
     background: rgba(0, 0, 0, 0.55);
     backdrop-filter: blur(4px);
 }
+
+@media (min-width: 600px) {
+    header nav ul {
+        max-width: 1150px;
+        margin: auto;
+        grid-template-columns: auto 1fr;
+        gap: 1.5rem;
+    }
+
+    dialog[open] {
+        grid-template-columns: 1fr 1fr;
+        height: 560px;
+    }
+
+    dialog img {
+        border-radius: var(--radius-big) 0 0 var(--radius-big);
+    }
+}
+ 
